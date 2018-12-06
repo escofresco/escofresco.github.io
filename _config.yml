@@ -1,5 +1,8 @@
 name: Jonasz Karwacki
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+gems:
+  - jekyll-sitemap
 
-theme: jekyll-theme-minimal
+url: https://jonasz.me
+description: Amazing. Just amazing.
