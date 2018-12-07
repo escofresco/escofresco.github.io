@@ -18,6 +18,10 @@
 // })();
 
 $(window).on('load', function() {
+
+  if($('.content').height() < $(window).height()) {
+    $('.content').css({'top': $(window).height()/2-$('.content').height()/2 + 'px'})
+  }
   var mX, mY, distance, $element  = $('.sidebar a');
   var elements = [$element].concat($('.rainbow'))
   function calculateDistance(elem, mouseX, mouseY) {
