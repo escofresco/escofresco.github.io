@@ -5,8 +5,7 @@
   src: url(/fonts/og-dcm-emoji.ttf);
 }
 
-/* Future Monica: I was lazy and only got the Latin ranges, so if you type anything
-in French or Romanian and it looks borked, maybe that's why. */
+
 @font-face {
   font-family: 'IBM Plex Mono';
   font-style: normal;
