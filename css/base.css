@@ -361,10 +361,73 @@ blockquote p {
 .content .listing a {
   color: black;
   padding-bottom: 2px;
-  border-bottom: 1px dotted #ddd;
+  border-bottom: 2px dotted #ddd;
   text-decoration: none;
   font-weight: normal;
+  -webkit-transition: border-width .1s ease;
+         -moz-transition: border-width .1s ease;
+           -o-transition: border-width .1s ease;
+          -ms-transition: border-width .1s ease;
+              transition: border-width .1s ease;
 }
+
+.content .listing a:hover {
+  border-width: 2px;
+}
+
+.content .listing a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    transition: width .3s;
+    border-top: 2px dotted #ff487a;
+    background: transparent;/* background: #ff487a; */
+    /* transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out; */
+    text-decoration: underline;
+    -webkit-text-decoration-skip: ink;
+    text-decoration-skip: ink;
+    font-weight: bold;
+}
+
+.content .listing a:hover::after {
+    width: 100%;
+
+    -webkit-animation: borderframes 3s infinite;
+    -moz-animation: borderframes 3s infinite;
+    animation: borderframes 3s infinite;
+}
+
+@-webkit-keyframes borderframes {
+  0%, 100% { border-color: #7ccdea; }
+  16%      { border-color: #0074D9; }
+  32%      { border-color: #2ECC40; }
+  48%      { border-color: #FFDC00; }
+  64%      { border-color: #B10DC9; }
+  80%      { border-color: #FF4136; }
+}
+@-moz-keyframes borderframes {
+  0%, 100% { border-color: #7ccdea; }
+  16%      { border-color: #0074D9; }
+  32%      { border-color: #2ECC40; }
+  48%      { border-color: #FFDC00; }
+  64%      { border-color: #B10DC9; }
+  80%      { border-color: #FF4136; }
+}
+@keyframes borderframes {
+  0%, 100% { border-color: #7ccdea; }
+  16%      { border-color: #0074D9; }
+  32%      { border-color: #2ECC40; }
+  48%      { border-color: #FFDC00; }
+  64%      { border-color: #B10DC9; }
+  80%      { border-color: #FF4136; }
+}
+/* .content .listing a:hover{
+  border-bottom: 3px solid #000;
+} */
+/* .content .listing a::after {
+} */
 
 .content .listing li span.talk-title {
   color: black;
@@ -393,8 +456,6 @@ a:hover {
   -webkit-animation: zomg 3s infinite;
   -moz-animation: zomg 3s infinite;
   animation: zomg 3s infinite;
-
-
 }
 
 @-webkit-keyframes pulse {
