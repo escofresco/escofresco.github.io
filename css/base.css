@@ -364,15 +364,12 @@ blockquote p {
   border-bottom: 2px dotted #ddd;
   text-decoration: none;
   font-weight: normal;
-  -webkit-transition: border-width .1s ease;
-         -moz-transition: border-width .1s ease;
-           -o-transition: border-width .1s ease;
-          -ms-transition: border-width .1s ease;
-              transition: border-width .1s ease;
+  font-variation-settings: "wght" 450;
+  transition: font-variation-settings 1s ease;
 }
 
 .content .listing a:hover {
-  border-width: 2px;
+  font-variation-settings: "wght" 800;
 }
 
 .content .listing a::after {
@@ -392,7 +389,7 @@ blockquote p {
 }
 
 .content .listing a:hover::after {
-    width: 100%;
+    width: 10%;
 
     -webkit-animation: borderframes 3s infinite;
     -moz-animation: borderframes 3s infinite;
