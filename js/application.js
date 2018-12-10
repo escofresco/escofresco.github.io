@@ -23,7 +23,7 @@ $(window).on('load', function() {
 
   var mX, mY, distance, $element  = $('.sidebar a');
   // var elements = [$element].concat($('.rainbow'));
-  var classes = ['.sidebar a', '.rainbow', '.content a'] //.concat($('.content a'));
+  var classes = ['.sidebar a', '.rainbow'] //.concat($('.content a'));
   function calculateDistance(elem, mouseX, mouseY) {
       return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left+(elem.width()/2)), 2) + Math.pow(mouseY - (elem.offset().top+(elem.height()/2)), 2)));
   }
