@@ -1,6 +1,7 @@
 ---
 layout: layout
 ---
+<!-- <link rel="stylesheet" href="/css/scroller.css" type="text/css" media="screen, projection"/> -->
 <section class="content">
   <section class="byline">
     {{ page.date | date: "%B %e, %Y" }}
@@ -9,24 +10,4 @@ layout: layout
     <a href="{{ page.url }}">{{ page.title }}</a>
   </h1>
   {{ content }}
-
-<!-- ---
-layout: layout
----
-
-<section class="content">
-  <h1>
-    <a href="{{ page.url }}">{{ page.title }}</a>
-  </h1>
-
-  <section class="byline">
-    {{ page.date | date: "%B %e, %Y" }}
-  </section>
-
-  {{ content }}
-
-  <section class="meta">
-
-    </section>
-  </section>
-</section> -->
+</section>
