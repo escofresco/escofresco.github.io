@@ -185,11 +185,12 @@ ul {
   position: fixed;
   margin-left: 50px;
   width: 150px;
+  text-align: center;
 }
 
 .sidebar .avatar {
   border-radius: 50%;
-  margin-top: calc(50vh - 100px);
+  /* margin-top: calc(50vh - 100px); */
 }
 
 .sidebar .avatar:hover {
@@ -198,29 +199,40 @@ ul {
   animation: avatarzomg 0.9s infinite;
 }
 
+
 .sidebar a {
   font-family: 'League Mono', monospace;
   font-variation-settings: "wght" 800;
-  font-size: 30px !important;
+  font-size: 20px !important;
   color: black;
   border-bottom: none;
 }
 
 .sidebar .meta {
-  margin-left: 24px;
+  /* margin-left: 24px; */
   margin-top: 10px;
   height: 20px;
   min-width:130px;
 }
 
+.sidebar .meta a {
+    font-size: 24px !important;
+}
+
 .sidebar .meta .icon {
   margin-left: 2px;
   margin-right: 2px;
-  font-size: 20px;
 }
 
 .sidebar .sections {
-  margin: 10px 0 0 54px;
+  /* margin: 10px 0 0 54px; */
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+
+.sidebar .sections ul {
+    position: relative;
+
 }
 
 .sidebar .sections li {
@@ -229,8 +241,10 @@ ul {
 }
 
 .sidebar .sections a {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 18px !important;
+  margin-top: 10px;
+  /* font-weight: bold; */
+  text-align: center;
 }
 
 .sidebar .sections button {
