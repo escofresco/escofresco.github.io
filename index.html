@@ -1,21 +1,33 @@
 ---
 layout: layout
-title: "Posts"
+title: "about"
 ---
 
 <section class="content">
-  <ul class="listing">
-    {% for post in site.posts %}
-      {% unless post.draft %}
-      {% capture currentdate %}{{post.date | date: "%Y"}}{% endcapture %}
-      {% if currentdate != thedate %}
-        <h3  class="rainbow">{{ currentdate }}</h3>
-        {% capture thedate %}{{currentdate}}{% endcapture %}
-      {% endif %}
-      <li>
-        <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-      {% endunless %}
-    {% endfor %}
-  </ul>
+    <h1>hi...i'm jonasz</h1>
+
+    <p>
+        I'm currently a student at <a href="https://www.makeschool.com/" target="_blank">Make School</a> in San Francisco, where I study data science. Before going to college, I spent a lot of time exploring what I wanted to do. I got started programming in high school with the quite strange Objectice-C. It helped prepare me for an internship at a <a href="http://www.ispot.com/" target="_blank">local software company</a>. After an enriching summer in Walnut Creek, I realized that I might just want to be a software engineer.
+    </p>
+    <p>
+        After the internship, I spent my last two years of high school engulfed by a series of web-based projects. One of them used Reddit's ranking algorithm to curate video content from other websites. By the time I graduated, I had a small portfolio of work that landed me an Android contracting job for a <a href="https://caura.org/">non-profit in Berkeley</a>.
+    </p>
+    <p>
+        After doing a little mobile work, I wanted to see what else was out there. While dropping in on classes my community college, I did some development work <a href="http://vsolvit.com/" target="_blank">VSolvit</a>. Most of my work consisted of automated testing and Python scripting.
+    </p>
+
+    <h3 class="rainbow">If you'd like to learn more about me, you can:</h3>
+    <p>
+        Take a look at my <a href="/projects" target="_blank">recent projects</a>,
+        send me an <a href="mailto:jonaszakr@gmail.com?subject=hi jonasz!" title="Email me" aria-label="Email me">email</a> or reach out on <a href="https://www.linkedin.com/in/jonasz-karwacki/" target="_blank" title="Find me on LinkedIn" aria-label="Find me on LinkedIn">linkedin</a>.
+    </p>
+
+</section>
+<section class="content">
+    <div class="footer">
+        <section class="thanks">
+            <span>thanks for visiting!</span>
+            <span><a href="#" class="heart" aria-hidden="true">🥳</a></span>
+        </section>
+    </div>
 </section>
