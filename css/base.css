@@ -50,7 +50,7 @@ p {
 }
 
 .top-line {
-  border-top: 8px solid #7BE4D5;
+  border-top: 8px solid black;
   position:fixed;
   top: 0;
   left: 0;
