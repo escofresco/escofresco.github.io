@@ -1,9 +1,13 @@
-// // Your JavaScript
+'use strict';
 
 $(window).on('load', function() {
+    /* Do these things once loaded */
+
+    // Call resize functions to setup page content
     adjustContentHeight();
     adjustSidebarHeight();
-    // $('.toggleIframe').hide();
+
+    // Set up iframe toggle listener
     toggleIframe()
 
     // var mX, mY, distance, $element  = $('.sidebar a');
@@ -50,12 +54,26 @@ function adjustSidebarHeight() {
 function toggleIframe() {
     /* Takes a list item (li) and expects exactly one anchor element and one
     iframe child. */
-    anchorSelector = '.toggleIframe > a'
-    iframeSelecter = '.toggleIframe > iframe'
+    const anchorSelector = '.toggleIframe > a'
+    const iframeSelecter = '.toggleIframe > iframe'
 
     displayToggle(anchorSelector, iframeSelecter, function (elm) {
-        elm_is_displayed = elm.css('display') != 'none';
-        if (elm_is_displayed) {
+        const elmIsDisplayed = elm.css('display') != 'none';
+        if (elmIsDisplayed) {
+            /* iframe is visible */
+            // make spinner overlay if it hasn't been created
+            if (!immediateElementExists('.spinner-container', elm.parent())) {
+                overlaySpinner(elm);
+            } else {
+                // display loading spinning until iframe has loaded
+                toggleLoadingSpinnerForElm(elm, elmIsDisplayed);
+            }
+
+            elm.on('load', function () {
+                /* iframe has loaded */
+                // remove loading spinner
+                toggleLoadingSpinnerForElm(elm, elmIsDisplayed);
+            });
             elm.prop('src', function (){
                 // Set src attribute to the value of data-src
                 return elm.data('src');
@@ -73,4 +91,45 @@ function displayToggle(btn, elm, cb) {
             cb($(this));
         });
     });
+}
+
+function toggleLoadingSpinnerForElm(elm, elmIsDisplayed) {
+    const spinner = $(elm.parent().children('.spinner-container')[0]);
+    spinner.toggle(!elmIsDisplayed);
+}
+
+function overlaySpinner(elm) {
+    const spinnerContainer = $('<div class="spinner-container"></div>');
+    const spinner = $(`
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>`);
+    const elmHeight = elm.height();
+    const elmWidth = elm.width();
+
+    // put spinner in spinner container
+    spinnerContainer.append(spinner);
+
+    // put spinner-container right before elm
+    elm.before(spinnerContainer);
+
+    // make spinner-container same size as elm
+    spinnerContainer.css({
+        'z-index': 2, // for overlay
+        'position': 'relative',
+        'height': elmHeight,
+        'width': elmWidth
+    });
+
+    // center spinner in spinner-container
+    spinner.css({
+        'position': 'relative',
+        'top': elmHeight/2 - spinner.height()/2,
+        'left': elmWidth/2 - spinner.width()/2
+    });
+}
+
+function immediateElementExists(selector, container) {
+    /* Check if elm is in container */
+    return container.children(selector).length > 0;
 }
