@@ -154,6 +154,34 @@ ul p {
   margin: 0 !important;
 }
 
+/**********************
+ * Projects
+ **********************/
+ @-webkit-keyframes bomg {
+   0%, 100% { background-color: #8B8982; }
+   16%      { background-color: #AAABBC; }
+   32%      { background-color: #C3C9E9; }
+   48%      { background-color: #6C91C2; }
+   64%      { background-color: #373F47; }
+   80%      { background-color: #AAABBC; }
+ }
+ @-moz-keyframes bomg {
+   0%, 100% { background-color: #8B8982; }
+   16%      { background-color: #AAABBC; }
+   32%      { background-color: #C3C9E9; }
+   48%      { background-color: #6C91C2; }
+   64%      { background-color: #373F47; }
+   80%      { background-color: #AAABBC; }
+ }
+ @keyframes bomg {
+   0%, 100% { background-color: #8B8982; }
+   16%      { background-color: #AAABBC; }
+   32%      { background-color: #C3C9E9; }
+   48%      { background-color: #6C91C2; }
+   64%      { background-color: #373F47; }
+   80%      { background-color: #AAABBC; }
+}
+
 .frame-overlay-container {
   position: relative;
   display: none;
@@ -166,8 +194,13 @@ ul p {
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  /* border: 5px solid rgba(0,0,0,1); */
+  border: 5px solid rgba(0,0,0,1);
+  background-color: #8B8982;
+  transition: background-color .3s ease-in-out;
+  -moz-transition: background-color .3s ease-in-out;
+  -webkit-animation: bomg 3s infinite;
+  -moz-animation: bomg 3s infinite;
+  animation: bomg 3s infinite;
 }
 
 
@@ -223,9 +256,9 @@ ul p {
 }
 
 .sidebar .avatar:hover {
-  -webkit-animation: avatarzomg 0.9s infinite;
-  -moz-animation: avatarzomg 0.9s infinite;
-  animation: avatarzomg 0.9s infinite;
+  -webkit-animation: zomg 0.9s infinite;
+  -moz-animation: zomg 0.9s infinite;
+  animation: zomg 0.9s infinite;
 }
 
 
