@@ -4,34 +4,32 @@ layout: layout
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 {% include head.html %}
-<body >
 
-
-    <div class="container-fluid" id="all">
-        <div id="container">
-          <div id="animate">
-          </div>
-        </div>
+<body>
+  <div class="container-fluid" id="all">
+    <div id="container">
+      <div id="animate">
+      </div>
     </div>
-    {% include sidebar.html %}
-    <div class="top-line"></div>
-    <br><br>
-    <div class="container-fluid" style="z-index: -1; height: 100%;" id="main-area">
-
+  </div>
+  {% include sidebar.html %}
+  <div class="top-line"></div>
+  <br><br>
+  <div class="container-fluid" style="z-index: -1; height: 100%;" id="main-area">
     {{ content }}
-    </div>
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
-
-    <script defer type="text/javascript" src="/js/application.js"></script>
-
-    <script async src="https://use.fontawesome.com/b5dcbf0faa.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.fog.min.js"></script>
-    <!-- <script>
+  </div>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script defer type="text/javascript" src="/js/application.js"></script>
+  <script async src="https://use.fontawesome.com/b5dcbf0faa.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.fog.min.js"></script>
+  <!-- <script>
     VANTA.FOG({
       el: "#main-area",
       mouseControls: true,

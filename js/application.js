@@ -1,7 +1,7 @@
 'use strict';
 const assert = (condition) => {
   if (!!!condition)
-  throw "Assertion Error!";
+    throw "Assertion Error!";
 }
 
 const activeframeSingleton = (() => {
@@ -125,12 +125,12 @@ const emojiRain = (() => {
     this.element.style.opacity = 0;
     this.element.style.position = 'absolute';
     this.element.style.fontSize = '26px';
-    this.element.style.color = 'hsl('+(Math.random()*360|0)+',80%,50%)';
+    this.element.style.color = 'hsl(' + (Math.random() * 360 | 0) + ',80%,50%)';
     this.element.innerHTML = c;
     container.appendChild(this.element);
 
     this.update = () => {
-      if (_this.y > window.innerHeight*2) {
+      if (_this.y > window.innerHeight * 2) {
         _this.y = 80 + Math.random() * 4;
         _this.x = _this.range[0] + Math.random() * _this.range[1];
         circleInView = false;
@@ -177,7 +177,7 @@ const emojiRain = (() => {
   };
 })();
 
-$(window).on('load', function() {
+$(window).on('load', function () {
   /* Do these things once loaded */
 
   // Make all attribute of the frame overlay singleton immutable.
@@ -187,5 +187,5 @@ $(window).on('load', function() {
   $("body").tooltip({ selector: '[data-toggle=tooltip]' });
 
   //emojiRain.animate();
-  
+
 });
