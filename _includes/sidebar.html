@@ -1,8 +1,6 @@
 <section class="sidebar">
   <div class="container">
 
-
-
     <div class="row">
       <div class="col">
               <a href="/" aria-label="Avatar" >
@@ -22,26 +20,42 @@
     </div>
     <div class="row">
       <div class="col">
-        <section class="meta text-center">
+        <!-- <section class="meta text-center"> -->
+            <div class="container pt-2">
+  <div class="row row-cols-2 align-bottom p-0">
 
-          <a href="{{ site.github.owner_url }}" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><i class="fa fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/jonasz-karwacki/" target="_blank" title="Find me on LinkedIn" aria-label="Find me on LinkedIn"><i class="fa fa-linkedin"></i></a>
-          <a href="https://medium.com/@jonaszk" target="_blank" aria-label="My blog" title="My blog"><i class="fa fa-medium" aria-hidden="true"></i></a>
-          <a href="mailto:jonaszakr@gmail.com?subject=hi jonasz!" target="_blank" title="Email me" aria-label="Email me"><i class="fa fa-envelope-o"></i></a>
+      <!-- Github button -->
+    <div class="col-6 pr-0 pr-1 text-right"><a href="{{ site.github.owner_url }}" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><i class="fa fa-github"></i></a></div>
 
+    <!-- LinkedIn Button -->
+    <div class="col-6 p-0 pl-1 text-left"><a href="https://www.linkedin.com/in/jonasz-karwacki/" target="_blank" title="Find me on LinkedIn" aria-label="Find me on LinkedIn"><i class="fa fa-linkedin"></i></a></div>
 
-        </section>
-      </div>
-    </div>
-    <div class="row">
+    <!-- Medium Button -->
+    <div class="col-6 p-0 pr-1 text-right"><a href="https://medium.com/@jonaszk" target="_blank" aria-label="My blog" title="My blog"><i class="fa fa-medium"></i></a></div>
+
+    <!-- Email Button -->
+    <div class="col-6 p-0 pl-1 text-left"><a href="mailto:jonaszakr@gmail.com?subject=hi jonasz!" target="_blank" title="Email me" aria-label="Email me"><i class="fa fa-envelope-o"></i></a></div>
+
+  </div>
+</div>
+
+        <!-- </section> -->
+      </div><!-- /col -->
+    </div><!-- /row -->
+    <div class="row pt-0">
       <div class="col">
+          <div class="container pt-0">
+
+
         <nav class="sections">
           <ul>
-            <li><a target="_blank" href="{{ site.github.owner_url }}/resume.pdf">résumé</a></li>
             <li><a href="/">about</a></li>
+            <li><a target="_blank" href="{{ site.github.owner_url }}/resume.pdf">résumé</a></li>
             <li><a href="/projects">projects</a></li>
           </ul>
         </nav>
+
+        </div>
       </div>
     </div>
   </div>
