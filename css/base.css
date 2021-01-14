@@ -52,6 +52,12 @@ p {
   line-height: 1.5;
 }
 
+.dagger-btn {
+  /* color: #777777 !important; */
+  display: inline !important;
+
+}
+
 .top-line {
   border-top: 8px solid black;
   position:fixed;
@@ -71,6 +77,32 @@ p {
 
 iframe {
   max-width: 100%;
+}
+
+/**********************
+ * Emoji Rain, courtesy of https://codepen.io/robertheiser/pen/NXrqXa
+ **********************/
+
+#container {
+ left: 0px;
+ top: -100px;
+ height: calc(100% + 100px);
+ overflow: hidden;
+ position: relative;
+}
+
+#animate{
+ margin: 0 auto;
+ width: 20px;
+ overflow: visible;
+ position: relative;
+}
+
+#all{
+ overflow: hidden;
+ height: 100%;
+ width: 100%;
+ position: fixed;
 }
 
 /**********************
@@ -152,6 +184,10 @@ ul {
 ul p {
   font-size: 1em;
   margin: 0 !important;
+}
+
+a {
+  cursor: pointer;
 }
 
 /**********************
